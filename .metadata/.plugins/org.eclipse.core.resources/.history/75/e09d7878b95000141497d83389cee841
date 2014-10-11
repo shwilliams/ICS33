@@ -1,0 +1,26 @@
+# Submitter: bohyunk(Kim, Bohyun)
+# Partner  : ablattle(Blattler, Albert)
+# We certify that we worked cooperatively on this programming
+#   assignment, according to the rules for pair programming
+
+from collections import defaultdict
+from goody       import safe_open
+
+
+
+def read_graph(given_file:str) -> dict:
+    '''reads a file and create a graph dictionary'''
+    ndict = defaultdict(set)
+    file = open(given_file, 'r') 
+    
+    for line_number, text in enumerate(file,1):
+        text = text.rstrip().lower()
+        if len(text) != 0:
+            reach = text.split(';')
+            key, value = reach[0], reach[1]
+            ndict[key].add(value)
+    
+    return ndict
+
+def print_graph(dic: dict)-> None:
+    print

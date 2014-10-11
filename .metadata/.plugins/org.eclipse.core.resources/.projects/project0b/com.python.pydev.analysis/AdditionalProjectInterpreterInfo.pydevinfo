@@ -1,0 +1,20 @@
+-- VERSION_4
+-- START DISKCACHE
+C:\Users\Boh\Workspace\.metadata\.plugins\org.eclipse.core.resources\.projects\project0b\com.python.pydev.analysis\v2_indexcache
+collatz|1412276281947|C:\Users\Boh\Workspace\project0b\collatz.py
+-- END DISKCACHE
+-- START DICTIONARY
+1
+1=collatz
+-- END DICTIONARY
+-- START TREE 1
+5
+cyc|1|cycle_count!11@
+is_|1|is_debugging!11@
+ori|1|original_number!11@
+tes|1|test_number!11@
+tim|1|timer!11@
+-- END TREE
+-- START TREE 2
+0
+-- END TREE

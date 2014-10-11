@@ -1,0 +1,22 @@
+-- VERSION_4
+-- START DISKCACHE
+C:\Users\Boh\Workspace\.metadata\.plugins\org.eclipse.core.resources\.projects\craps\com.python.pydev.analysis\v2_indexcache
+craps|1412627298415|C:\Users\Boh\Workspace\craps\craps.py
+-- END DISKCACHE
+-- START DICTIONARY
+1
+1=craps
+-- END DICTIONARY
+-- START TREE 1
+7
+dic|1|dice!11@
+fir|1|first_roll!11@
+gam|2|game_timer!11@games_to_play!11@
+los|1|lose_count!11@
+poi|1|point!11@
+rol|1|roll!11@
+win|1|win_count!11@
+-- END TREE
+-- START TREE 2
+0
+-- END TREE

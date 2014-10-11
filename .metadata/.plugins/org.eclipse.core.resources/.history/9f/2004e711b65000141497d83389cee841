@@ -1,0 +1,16 @@
+# Submitter: bohyunk(Kim, Bohyun)
+# Partner  : ablattle(Blattler, Albert)
+# We certify that we worked cooperatively on this programming
+#   assignment, according to the rules for pair programming
+
+from collections import defaultdict
+from goody       import safe_open
+
+file = safe_open(' Enter file with graph:','r','Illegal file name')
+
+ndict = defaultdict(set)
+
+
+def read_graph(given_file : str) -> dict:
+    ndict = defaultdict(set)
+    

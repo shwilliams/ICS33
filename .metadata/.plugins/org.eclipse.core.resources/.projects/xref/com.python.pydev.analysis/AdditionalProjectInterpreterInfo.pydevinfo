@@ -1,0 +1,19 @@
+-- VERSION_4
+-- START DISKCACHE
+C:\Users\Boh\Workspace\.metadata\.plugins\org.eclipse.core.resources\.projects\xref\com.python.pydev.analysis\v2_indexcache
+xref|1412705999195|C:\Users\Boh\Workspace\xref\xref.py
+-- END DISKCACHE
+-- START DICTIONARY
+1
+1=xref
+-- END DICTIONARY
+-- START TREE 1
+4
+fil|1|file!11@
+max|1|max_len!11@
+tex|1|text!11@
+xre|1|xref!11@
+-- END TREE
+-- START TREE 2
+0
+-- END TREE

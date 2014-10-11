@@ -1,0 +1,12 @@
+MODULES_MANAGER_V2
+dice|C:\Users\Boh\Workspace\courselib\dice.py
+driver|C:\Users\Boh\Workspace\courselib\driver.py
+equivalence|C:\Users\Boh\Workspace\courselib\equivalence.py
+goody|C:\Users\Boh\Workspace\courselib\goody.py
+graph|C:\Users\Boh\Workspace\courselib\graph.py
+modular|C:\Users\Boh\Workspace\courselib\modular.py
+predicate|C:\Users\Boh\Workspace\courselib\predicate.py
+priorityqueue|C:\Users\Boh\Workspace\courselib\priorityqueue.py
+prompt|C:\Users\Boh\Workspace\courselib\prompt.py
+stack|C:\Users\Boh\Workspace\courselib\stack.py
+stopwatch|C:\Users\Boh\Workspace\courselib\stopwatch.py
