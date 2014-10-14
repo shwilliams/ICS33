@@ -4,8 +4,9 @@
 #   assignment, according to the rules for pair programming
 
 from collections import defaultdict
+from goody       import safe_open
 
-
+###Functions used in main script
 def read_graph(given_file:str) -> dict:
     '''reads a file and create a graph dictionary'''
     ndict = defaultdict(set)
@@ -38,4 +39,31 @@ def reachable(dic: dict, snode: str)->set:
                 explore.add(next)
     
     return visited
-        
+
+
+def valid_start_node(dic: dict, snode: str)->bool:
+    if snode not in dic:
+        return False  
+    else:
+        return True 
+
+###Here is the main script
+
+if __name__ == '__main__':
+    file = input('Enter file with graph: ').lower()
+    graph = read_graph(file)
+    print()
+    print_graph(graph)
+    print()
+    snode = input('Enter starting node: ').lower()
+    while snode != 'quit':
+        if valid_start_node(graph, snode):
+            reachable_nodes = reachable(graph, snode)
+            print('From {node} the reachable nodes are {reachable}'.format(node = snode, reachable = reachable_nodes ))
+            print()
+            snode = input('Enter starting node: ').lower()
+        else:
+            print('    Entry Error: '+snode+';  Not a source node')
+            print('    Please enter a legal String')
+            print()
+            snode = input('Enter starting node: ').lower()
