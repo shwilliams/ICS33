@@ -1,0 +1,20 @@
+-- VERSION_4
+-- START DISKCACHE
+/Users/bohyunkim/Documents/workspace/.metadata/.plugins/org.eclipse.core.resources/.projects/project1c/com.python.pydev.analysis/v2_indexcache
+fa.fa|1413660019000|/Users/bohyunkim/Documents/workspace/project1c/fa/fa.py
+fa.__init__|1413784784000|/Users/bohyunkim/Documents/workspace/project1c/fa/__init__.py
+-- END DISKCACHE
+-- START DICTIONARY
+1
+1=fa.fa
+-- END DICTIONARY
+-- START TREE 1
+4
+int|1|interpret!10@
+pri|1|print_fa!10@
+pro|1|process!10@
+rea|1|read_fa!10@
+-- END TREE
+-- START TREE 2
+0
+-- END TREE

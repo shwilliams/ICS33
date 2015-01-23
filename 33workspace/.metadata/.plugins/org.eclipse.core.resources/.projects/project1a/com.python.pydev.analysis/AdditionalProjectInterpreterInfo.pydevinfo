@@ -1,0 +1,18 @@
+-- VERSION_4
+-- START DISKCACHE
+/Users/bohyunkim/Documents/workspace/.metadata/.plugins/org.eclipse.core.resources/.projects/project1a/com.python.pydev.analysis/v2_indexcache
+reachable|1413783678000|/Users/bohyunkim/Documents/workspace/project1a/reachable.py
+-- END DISKCACHE
+-- START DICTIONARY
+1
+1=reachable
+-- END DICTIONARY
+-- START TREE 1
+3
+pri|1|print_graph!10@
+rea|2|reachable!10@read_graph!10@
+val|1|valid_start_node!10@
+-- END TREE
+-- START TREE 2
+0
+-- END TREE

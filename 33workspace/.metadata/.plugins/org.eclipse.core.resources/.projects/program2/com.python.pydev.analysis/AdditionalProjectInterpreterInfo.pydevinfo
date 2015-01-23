@@ -1,0 +1,66 @@
+-- VERSION_4
+-- START DISKCACHE
+/Users/bohyunkim/Documents/workspace/.metadata/.plugins/org.eclipse.core.resources/.projects/program2/com.python.pydev.analysis/v2_indexcache
+generatordriver|1398146518000|/Users/bohyunkim/Documents/workspace/program2/generatordriver.py
+bag|1415146350000|/Users/bohyunkim/Documents/workspace/program2/bag.py
+poly|1415144473000|/Users/bohyunkim/Documents/workspace/program2/poly.py
+generator|1415156078000|/Users/bohyunkim/Documents/workspace/program2/generator.py
+-- END DISKCACHE
+-- START DICTIONARY
+11
+5=Bag
+10=Poly.prange_iter.__next__
+4=Poly
+6=Poly.prange_iter
+2=bag
+11=Poly.__init__
+3=poly
+8=Bag.__init__
+1=generator
+7=Bag.remove
+9=Poly.prange_iter.__init__
+-- END DICTIONARY
+-- START TREE 1
+8
+alt|1|alternate!10@
+bag|1|Bag!17@
+let|1|lets!10@
+n_w|1|n_with_pad!10@
+pol|1|Poly!25@
+run|1|running_count!10@
+seq|1|sequence!10@
+tra|1|transform!10@
+-- END TREE
+-- START TREE 2
+30
+__a|2|__add__!4&26@__abs__!4&26@
+__b|1|__bool__!4&26@
+__c|2|__call__!4&26@__contains__!5&18@
+__d|1|__delitem__!4&26@
+__e|2|__eq__!5&18@__eq__!4&26@
+__g|3|__ge__!4&26@__gt__!4&26@__getitem__!4&26@
+__i|5|__iter__!4&26@__init__!6&26@__init__!4&26@__iter__!5&18@__init__!5&18@
+__l|4|__le__!4&26@__len__!4&26@__lt__!4&26@__len__!5&18@
+__m|1|__mul__!4&26@
+__n|3|__neg__!4&26@__next__!6&26@__ne__!5&18@
+__p|2|__pow__!4&26@__pos__!4&26@
+__r|5|__radd__!4&26@__repr__!4&26@__rsub__!4&26@__repr__!5&18@__rmul__!4&26@
+__s|5|__str__!4&26@__str__!5&18@__setattr__!4&26@__setitem__!4&26@__sub__!4&26@
+_ad|1|_add_term!4&26@
+add|1|add!5&18@
+bag|2|bag!7&19@bag!8&19@
+con|1|conversion!4&26@
+cou|1|count!5&18@
+def|1|def_integrate!4&26@
+dif|1|differentiate!4&26@
+ind|1|index!9&27@
+ini|1|initial!8&19@
+int|1|integrate!4&26@
+it|1|it!9&27@
+n|2|n!10&27@n!9&27@
+p|1|p!4&27@
+pra|1|prange_iter!4&25@
+rem|1|remove!5&18@
+ter|1|terms!11&27@
+uni|1|unique!5&18@
+-- END TREE

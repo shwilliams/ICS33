@@ -1,0 +1,18 @@
+-- VERSION_4
+-- START DISKCACHE
+/Users/bohyunkim/Documents/workspace/.metadata/.plugins/org.eclipse.core.resources/.projects/retester/com.python.pydev.analysis/v2_indexcache
+retester|1413963195000|/Users/bohyunkim/Documents/workspace/retester/retester.py
+-- END DISKCACHE
+-- START DICTIONARY
+1
+1=retester
+-- END DICTIONARY
+-- START TREE 1
+3
+bat|1|batch!10@
+rep|1|repeat!10@
+tes|5|test_search!10@test_substitute!10@test_findall!10@test_split!10@test_match!10@
+-- END TREE
+-- START TREE 2
+0
+-- END TREE

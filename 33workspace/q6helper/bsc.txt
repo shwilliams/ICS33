@@ -1,0 +1,54 @@
+# Setup
+c-->from imp import reload
+c-->import q6solution
+c-->reload(q6solution)
+c-->from goody import irange
+c-->import predicate
+c-->from random import shuffle
+c-->from q6solution import count, equal, min_max, Counter, Modular_Counter
+c-->from q6solution import add_all, list_to_ll
+# Test count
+c-->values = [i for i in irange(1,200)]
+c-->shuffle(values)
+e-->count(add_all(None,values),predicate.is_prime)-->46
+c-->shuffle(values)
+e-->count(add_all(None,values),predicate.is_prime)-->46
+c-->shuffle(values)
+e-->count(add_all(None,values),predicate.is_prime)-->46
+# Test equal
+c-->a = list_to_ll(['one','two','three','four'])
+c-->b = list_to_ll(['one','two','three','four'])
+c-->c = list_to_ll(['one','two','three'])
+c-->d = list_to_ll(['one','two','three','four','five'])
+c-->e = list_to_ll(['one','two','four','four'])
+c-->x = list_to_ll([])
+e-->equal(a,b)-->True
+e-->equal(a,c)-->False
+e-->equal(a,d)-->False
+e-->equal(a,e)-->False
+e-->equal(x,x)-->True
+e-->equal(x,a)-->False
+e-->equal(a,x)-->False
+# Test min_max
+e-->min_max(None)-->(None, None)
+e-->min_max(list_to_ll([0]))-->(0, 0)
+e-->min_max(list_to_ll([7, 3, 5, 2, 0]))-->(0, 7)
+e-->min_max(list_to_ll([1, 3, 5, 2, 7]))-->(1, 7)
+c-->shuffle(values)
+e-->min_max(list_to_ll(values))-->(1, 200)
+c-->shuffle(values)
+e-->min_max(list_to_ll(values))-->(1, 200)
+c-->shuffle(values)
+e-->min_max(list_to_ll(values))-->(1, 200)
+# Test Dumpable
+c-->c = Counter(3)           
+c-->c.afunc = lambda x : x + 1
+c-->mc = Modular_Counter(1,5)
+c-->mc.afunc = lambda x : x + 1
+c-->x = c.get_state()
+c-->y = mc.get_state()
+e-->len(x)-->1
+e-->x['_value']-->3
+e-->len(y)-->2
+e-->y['_value']-->1
+e-->y['_modulus']-->5

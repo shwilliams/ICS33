@@ -1,0 +1,21 @@
+-- VERSION_4
+-- START DISKCACHE
+/Users/bohyunkim/Documents/workspace/.metadata/.plugins/org.eclipse.core.resources/.projects/project1b/com.python.pydev.analysis/v2_indexcache
+instantrunoff|1413784263000|/Users/bohyunkim/Documents/workspace/project1b/instantrunoff.py
+-- END DISKCACHE
+-- START DICTIONARY
+1
+1=instantrunoff
+-- END DICTIONARY
+-- START TREE 1
+6
+dec|1|decide_winner!10@
+eva|1|evaluate_ballot!10@
+non|1|NONE!11@
+pri|1|print_dict!10@
+rea|1|read_voter_preferences!10@
+rem|1|remaining_candidates!10@
+-- END TREE
+-- START TREE 2
+0
+-- END TREE

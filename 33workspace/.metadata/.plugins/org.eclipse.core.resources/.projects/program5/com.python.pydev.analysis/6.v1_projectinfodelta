@@ -1,0 +1,14 @@
+INSTUPcontroller
+/Users/bohyunkim/Documents/workspace/program5/controller.py
+INFOS:&&3|1|2|0&&3|3|2|0&&2|4|2|0&&2|5|2|0&&2|6|2|0&&2|7|2|0&&2|8|2|0&&2|9|2|0&&2|10|2|0&&2|11|2|0
+progress=10
+simulation_canvas=9
+repeater=11
+start_button=5
+reset_button=4
+stop_button=6
+step_button=7
+object_button=8
+the_progress=3
+controller=2
+the_canvas=1

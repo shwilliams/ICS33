@@ -1,0 +1,19 @@
+-- VERSION_4
+-- START DISKCACHE
+/Users/bohyunkim/Documents/workspace/.metadata/.plugins/org.eclipse.core.resources/.projects/project1d/com.python.pydev.analysis/v2_indexcache
+ndfa|1413748882000|/Users/bohyunkim/Documents/workspace/project1d/ndfa.py
+-- END DISKCACHE
+-- START DICTIONARY
+1
+1=ndfa
+-- END DICTIONARY
+-- START TREE 1
+4
+int|1|interpret!10@
+pri|1|print_ndfa!10@
+pro|1|process!10@
+rea|1|read_ndfa!10@
+-- END TREE
+-- START TREE 2
+0
+-- END TREE

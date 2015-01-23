@@ -1,0 +1,257 @@
+# Setup
+c-->from imp import reload
+c-->import poly
+c-->reload(poly)
+c-->from poly import Poly
+# Test init
+==-->Poly( (3,2) ).terms-->{2:3}
+==-->Poly( (3,2), (-2,1), (4,0) ).terms-->{2:3, 1:-2, 0:4}
+==-->Poly( (1,5), (-2,4), (3,3), (5,1), (-6,0) ).terms-->{5:1, 4:-2, 3:3, 1:5, 0:-6}
+==-->Poly( (3.,2), (-2,1), (4.,0) ).terms-->{2: 3.0, 1:-2, 0:4.0}
+==-->Poly( (3.,2), (0,1), (4.,0) ).terms-->{2: 3.0, 0:4.0}
+==-->Poly().terms-->dict()
+^-->Poly( ('a',2) )                 # coefficent not numeric-->AssertionError
+^-->Poly( (3,'a') )                 # power not numeric-->AssertionError
+^-->Poly( (3,1.)  )                 # power not int-->AssertionError
+^-->Poly( (3,-2)  )                 # power negative-->AssertionError
+^-->Poly( (2, 1), (3, 2) )          # powers not decreasing-->AssertionError
+^-->Poly( (3, 2), (1, 2) )          # powers not decreasing-->AssertionError
+^-->Poly( (3, 2), (-2, 1), (1,5) )  # powers not decreasing-->AssertionError
+# Test repr
+e-->repr( Poly( (3,2), (-2,1), (4,0) ) )-->Poly((3, 2), (-2, 1), (4, 0))
+e-->repr( Poly( (1,5), (-2,4), (3,3), (-4,2), (5,1), (-6,0 ) ) )-->Poly((1, 5), (-2, 4), (3, 3), (-4, 2), (5, 1), (-6, 0))
+e-->repr( Poly() )-->Poly()
+# Test str
+e-->Poly()-->0
+e-->Poly( (3,2) )-->3x^2
+e-->Poly( (-3,2) )-->-3x^2
+e-->Poly( (1,2) )-->x^2
+e-->Poly( (-1,2) )-->-x^2
+e-->Poly( (1,0) )-->1
+e-->Poly( (-1,0) )-->-1
+e-->Poly( (1,2),  ( 1,1), (1, 0) )-->x^2 + x + 1
+e-->Poly( (1,2),  ( 1,1), (-1,0) )-->x^2 + x - 1
+e-->Poly( (1,2),  (-1,1), (1, 0) )-->x^2 - x + 1
+e-->Poly( (1,2),  (-1,1), (-1,0) )-->x^2 - x - 1
+e-->Poly( (-1,2), ( 1,1), (1, 0) )-->-x^2 + x + 1
+e-->Poly( (-1,2), ( 1,1), (-1,0) )-->-x^2 + x - 1
+e-->Poly( (-1,2), (-1,1), (1, 0) )-->-x^2 - x + 1
+e-->Poly( (-1,2), (-1,1), (-1,0) )-->-x^2 - x - 1
+e-->Poly( (3,2), (-2,1), (4,0) )-->3x^2 - 2x + 4
+e-->Poly( (1,5), (-2,4), (3,3), (-4,2), (5,1), (-6,0) )-->x^5 - 2x^4 + 3x^3 - 4x^2 + 5x - 6
+e-->Poly( (3.,2), (-2,1), (4.,0) )-->3.0x^2 - 2x + 4.0
+e-->Poly( (-3,2), (-1,1), (4,0) )-->-3x^2 - x + 4
+e-->Poly( (-3,2), (-1,1), (4.0,0) )-->-3x^2 - x + 4.0
+# Test bool and len
+e-->bool(Poly())-->False
+e-->bool( Poly((0,0)) )-->False
+e-->bool( Poly((0,1)) )-->False
+e-->bool(Poly((1,1)) )-->True
+e-->bool(Poly((1,0)))-->True
+e-->len( Poly( (3,2), (-2,1), (4,0) ) )-->2
+e-->len( Poly( (1,5), (-2,4), (3,3), (-4,2), (5,1), (-6,0) ) )-->5
+e-->len( Poly( (1,5) ))-->5
+e-->len( Poly() )-->0
+e-->len( Poly((5,0)) )-->0
+# Test __call__
+e-->Poly( (3,2), (-2,1), (4,0) )(2)-->12
+e-->Poly( (3,2), (-2,1), (4,0) )(-2)-->20
+e-->Poly()(1)-->0
+# Test __iter__
+e-->[t for t in Poly( (3,2), (-2,1), (4,0) )]-->[(3, 2), (-2, 1), (4, 0)]
+e-->[t for t in Poly( (1,5), (-2,4), (3,3), (-4,2), (5,1), (-6,0) )]-->[(1, 5), (-2, 4), (3, 3), (-4, 2), (5, 1), (-6, 0)]
+e-->[t for t in Poly()]-->[]
+# Test __getitem__
+c-->p = Poly( (3,2), (-2,1), (4,0) )
+e-->[p[i] for i in range(len(p)+1)]-->[4, -2, 3]
+c-->p = Poly( (3,4), (-2,1) )
+e-->[p[i] for i in range(len(p)+1)]-->[0, -2, 0, 0, 3]
+^-->p['a']-->TypeError
+^-->p[-2]-->TypeError
+# Test __setitem__
+c-->p = Poly( (3,2), (-2,1), (4,0) )
+c-->p[5] = -2
+e-->p-->-2x^5 + 3x^2 - 2x + 4
+c-->p[2] = 5
+e-->p-->-2x^5 + 5x^2 - 2x + 4
+c-->p[2] = 0
+e-->p-->-2x^5 - 2x + 4
+c-->p[10] = 0
+e-->p-->-2x^5 - 2x + 4
+^-->p[-2] = 4-->TypeError
+^-->p['a'] = 1-->TypeError
+# Test __delitem__
+c-->p = Poly( (3,2), (-2,1), (4,0) )
+c-->del p[1]
+e-->p-->3x^2 + 4
+c-->del p[4]
+e-->p-->3x^2 + 4
+c-->del p[0]
+e-->p-->3x^2
+c-->del p[2]
+e-->p-->0
+^-->del p[-2]-->TypeError
+^-->del p['a']-->TypeError
+# Test helper method _add_item_
+c-->p = Poly()
+c-->p._add_term(-2,1)
+e-->p-->-2x
+c-->p._add_term(3,2)
+e-->p-->3x^2 - 2x
+c-->p._add_term(4,0)
+e-->p-->3x^2 - 2x + 4
+c-->p._add_term(3,2)
+e-->p-->6x^2 - 2x + 4
+c-->p._add_term(2,1)
+e-->p-->6x^2 + 4
+c-->p._add_term(0,3)
+e-->p-->6x^2 + 4
+# Test unary +/- and abs
+c-->p1 = Poly((3,2),(-2,1),(4,0))
+c-->p2 = +p1
+e-->p2 is p1-->False
+==-->str(p2)-->str(p1)
+c-->p2 = -p1
+e-->p2 is p1-->False
+==-->str(p2)-->'-3x^2 + 2x - 4'
+c-->p3 = -p2
+==-->str(p1)-->str(p3)
+c-->p2 = abs(p1)
+e-->p2 is p1-->False
+e-->p2-->3x^2 + 2x + 4
+c-->p2 = abs(p3)
+e-->p2 is p1-->False
+e-->p2-->3x^2 + 2x + 4
+# Test differentiate, integrate, definite_integrate
+c-->p1 = Poly((3,2),(-2,1),(4,0))
+c-->p2 = p1.differentiate()
+e-->p2 is p1-->False
+e-->p2-->6x - 2
+c-->p3 = p1.integrate(-2)
+e-->p3 is p1-->False
+e-->p3-->x^3 - x^2 + 4.0x - 2
+e-->p1.def_integrate(1,2)-->8.0
+# Test +
+c-->p1 = Poly((1,1),(2,0))
+c-->p2 = Poly((3,2),(2,1),(1,0))
+c-->p3 = Poly((3,5),(-2,2),(-4,0))
+e-->p1+p2-->3x^2 + 3x + 3
+e-->p2+p3-->3x^5 + x^2 + 2x - 3
+e-->p1+p3-->3x^5 - 2x^2 + x - 2
+e-->2+p3-->3x^5 - 2x^2 - 2
+e-->p3+2-->3x^5 - 2x^2 - 2
+^-->p1+'a'-->TypeError
+^-->'a'+p1-->TypeError
+# Test -
+c-->p1 = Poly((1,1),(2,0))
+c-->p2 = Poly((3,2),(2,1),(1,0))
+c-->p3 = Poly((3,5),(-2,2),(-4,0))
+e-->p1-p2-->-3x^2 - x + 1
+e-->p2-p3-->-3x^5 + 5x^2 + 2x + 5
+e-->p1-p3-->-3x^5 + 2x^2 + x + 6
+e-->2-p3-->-3x^5 + 2x^2 + 6
+e-->p3-2-->3x^5 - 2x^2 - 6
+^-->p1-'a'-->TypeError
+^-->'a'-p1-->TypeError
+# Test *
+c-->p1 = Poly((1,1),(2,0))
+c-->p2 = Poly((3,2),(2,1),(1,0))
+c-->p3 = Poly((3,5),(-2,2),(-4,0))
+e-->p1*p1-->x^2 + 4x + 4
+e-->p1*p2-->3x^3 + 8x^2 + 5x + 2
+e-->p2*p2-->9x^4 + 12x^3 + 10x^2 + 4x + 1
+e-->p2*p3-->9x^7 + 6x^6 + 3x^5 - 6x^4 - 4x^3 - 14x^2 - 8x - 4
+e-->p3*p3-->9x^10 - 12x^7 - 24x^5 + 4x^4 + 16x^2 + 16
+e-->2*p3-->6x^5 - 4x^2 - 8
+e-->p3*2-->6x^5 - 4x^2 - 8
+e-->p1*Poly()-->0
+^-->p1*'a'-->TypeError
+^-->'a'*p1-->TypeError
+# Test **
+c-->p1 = Poly((3,5),(-2,2),(-4,0))
+e-->p2**0-->1
+e-->p1**2-->9x^10 - 12x^7 - 24x^5 + 4x^4 + 16x^2 + 16
+e-->p1**5-->243x^25 - 810x^22 - 1620x^20 + 1080x^19 + 4320x^17 - 720x^16 + 4320x^15 - 4320x^14 + 240x^13 - 8640x^12 + 1920x^11 - 5792x^10 + 5760x^9 - 320x^8 + 7680x^7 - 1280x^6 + 3840x^5 - 2560x^4 - 2560x^2 - 1024
+^-->p1**'a'-->TypeError
+^-->p1**-2-->TypeError
+# Test ==
+c-->p0 = Poly((5,0))
+c-->p1 = Poly((1,1),(2,0))
+c-->p2 = Poly((3,2),(2,1),(1,0))
+c-->p3 = Poly((3,5),(-2,2),(-4,0))
+==-->p1*p2-->Poly((3,3),(8,2),(5,1),(2,0))
+==-->[a==b for a in (p0,p1,p2,p3) for b in (p0,p1,p2,p3)]-->[a is b for a in (p0,p1,p2,p3) for b in (p0,p1,p2,p3)]
+==-->all([a*b==b*a for a in (p0,p1,p2,p3) for b in (p0,p1,p2,p3)])-->True
+e-->5==p0-->True
+e-->p1==5-->False
+e-->5==p1-->False
+^-->'a'==p0-->TypeError
+^-->p0=='a'-->TypeError
+# Test ==
+c-->p0 = Poly((5,0))
+c-->p1 = Poly((1,1),(2,0))
+c-->p2 = Poly((3,2),(2,1),(1,0))
+c-->p3 = Poly((3,5),(-2,2),(-4,0))
+==-->p1*p2-->Poly((3,3),(8,2),(5,1),(2,0))
+==-->[a!=b for a in (p0,p1,p2,p3) for b in (p0,p1,p2,p3)]-->[a is not b for a in (p0,p1,p2,p3) for b in (p0,p1,p2,p3)]
+==-->any([a*b!=b*a for a in (p0,p1,p2,p3) for b in (p0,p1,p2,p3)])-->False
+e-->5!=p0-->False
+e-->p1!=5-->True
+e-->5!=p1-->True
+^-->'a'!=p0-->TypeError
+^-->p0!='a'-->TypeError
+# Test <
+c-->p1 = Poly((1,2))
+c-->p2 = Poly((1,3))
+c-->p3 = Poly((3,3))
+e-->p1 < p1-->False
+e-->p2 < p2-->False
+e-->p3 < p3-->False
+e-->p1 < p2-->True
+e-->p2 < p1-->False
+e-->p2 < p3-->True
+e-->p3 < p2-->False
+^-->'a'<p0-->TypeError
+^-->p0<'a'-->TypeError
+# Test >
+c-->p1 = Poly((1,2))
+c-->p2 = Poly((1,3))
+c-->p3 = Poly((3,3))
+e-->p1 > p1-->False
+e-->p2 > p2-->False
+e-->p3 > p3-->False
+e-->p1 > p2-->False
+e-->p2 > p1-->True
+e-->p2 > p3-->False
+e-->p3 > p2-->True
+^-->'a'<p0-->TypeError
+^-->p0<'a'-->TypeError
+# Test <=
+c-->p1 = Poly((1,2))
+c-->p2 = Poly((1,3))
+c-->p3 = Poly((3,3))
+e-->p1 <= p1-->True
+e-->p2 <= p2-->True
+e-->p3 <= p3-->True
+e-->p1 <= p2-->True
+e-->p2 <= p1-->False
+e-->p2 <= p3-->True
+e-->p3 <= p2-->False
+^-->'a'<p0-->TypeError
+^-->p0<'a'-->TypeError
+# Test >=
+c-->p1 = Poly((1,2))
+c-->p2 = Poly((1,3))
+c-->p3 = Poly((3,3))
+e-->p1 >= p1-->True
+e-->p2 >= p2-->True
+e-->p3 >= p3-->True
+e-->p1 >= p2-->False
+e-->p2 >= p1-->True
+e-->p2 >= p3-->False
+e-->p3 >= p2-->True
+^-->'a'<p0-->TypeError
+^-->p0<'a'-->TypeError
+# Test setting attributes
+c-->p1 = Poly((1,2))
+^-->p1.terms = None-->AssertionError

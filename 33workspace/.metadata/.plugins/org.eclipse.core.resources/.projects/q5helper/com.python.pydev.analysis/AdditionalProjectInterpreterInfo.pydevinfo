@@ -1,0 +1,29 @@
+-- VERSION_4
+-- START DISKCACHE
+/Users/bohyunkim/Documents/workspace/.metadata/.plugins/org.eclipse.core.resources/.projects/q5helper/com.python.pydev.analysis/v2_indexcache
+collatz|1396552784000|/Users/bohyunkim/Documents/workspace/q5helper/collatz.py
+q5solution|1415808564000|/Users/bohyunkim/Documents/workspace/q5helper/q5solution.py
+cmtest|1367539234000|/Users/bohyunkim/Documents/workspace/q5helper/cmtest.py
+-- END DISKCACHE
+-- START DICTIONARY
+3
+2=collatz
+1=q5solution
+3=cmtest
+-- END DICTIONARY
+-- START TREE 1
+10
+cod|1|code_metric!10@
+com|1|compare!10@
+cyc|1|cycle_count!19@
+is_|2|is_sorted!10@is_debugging!19@
+ori|1|original_number!19@
+sep|1|separate!10@
+sor|1|sort!10@
+tes|1|test_number!19@
+tim|1|timer!19@
+x|1|x!27@
+-- END TREE
+-- START TREE 2
+0
+-- END TREE

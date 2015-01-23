@@ -1,0 +1,60 @@
+-- VERSION_4
+-- START DISKCACHE
+/Users/bohyunkim/Documents/workspace/.metadata/.plugins/org.eclipse.core.resources/.projects/program3/com.python.pydev.analysis/v2_indexcache
+play_ground|1416285319000|/Users/bohyunkim/Documents/workspace/program3/play_ground.py
+pcollections|1416285781000|/Users/bohyunkim/Documents/workspace/program3/pcollections.py
+miniexample|1416161152000|/Users/bohyunkim/Documents/workspace/program3/miniexample.py
+kargsexample|1416276489000|/Users/bohyunkim/Documents/workspace/program3/kargsexample.py
+restaurant|1367095736000|/Users/bohyunkim/Documents/workspace/program3/restaurant.py
+CIStunes|1399130698000|/Users/bohyunkim/Documents/workspace/program3/CIStunes.py
+-- END DISKCACHE
+-- START DICTIONARY
+8
+6=play_ground
+5=pcollections
+3=miniexample
+7=Triple1
+4=kargsexample
+8=Triple1.__init__
+2=CIStunes
+1=restaurant
+-- END DICTIONARY
+-- START TREE 1
+22
+__a|1|__author__!11@
+alb|4|Album_to_Songdisplays!18@Album_length!18@Album_id!18@Album!19@
+all|2|all_songs!18@all_Songdisplays!18@
+col|6|collection_sort!18@Collection_new!10@Collection_str!10@Collection_remove_by_name!10@Collection_add!10@Collection_search_by_name!10@
+dec|1|decorate_it!27@
+f|2|f!34@f!27@
+fil|1|filter_letters!27@
+han|1|handle_commands!10@
+inv|1|invalid_command!10@
+mak|1|make_keep!26@
+men|1|MENU!11@
+mus|1|MUSIC!19@
+pla|1|play_count_from_songdisplay!18@
+pna|1|pnamedtuple!42@
+res|4|Restaurant!11@restaurants!10@Restaurant_get_info!10@Restaurant_str!10@
+son|4|Songdisplay!19@Songlist!19@Song!19@Song_play_count!18@
+t1|1|t1!51@
+t2|1|t2!51@
+tes|1|test_list!19@
+top|2|top_n_played_songs!18@top_n_played!18@
+tri|1|Triple1!49@
+wor|1|word!27@
+-- END TREE
+-- START TREE 2
+11
+__e|1|__eq__!7&50@
+__g|1|__getitem__!7&50@
+__i|1|__init__!7&50@
+__r|1|__repr__!7&50@
+_fi|1|_fields!8&51@
+_mu|1|_mutable!8&51@
+_re|1|_replace!7&50@
+a|1|a!8&51@
+b|1|b!8&51@
+c|1|c!8&51@
+get|3|get_b!7&50@get_a!7&50@get_c!7&50@
+-- END TREE

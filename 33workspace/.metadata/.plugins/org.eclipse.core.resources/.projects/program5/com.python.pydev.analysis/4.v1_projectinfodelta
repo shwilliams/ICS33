@@ -1,0 +1,11 @@
+INSTUPball
+/Users/bohyunkim/Documents/workspace/program5/ball.py
+INFOS:&&1|1|2|0&&3|3|2|1&&3|4|2|1&&3|5|2|1&&3|6|2|1&&2|7|2|1&&2|8|2|1
+Ball=1
+__init__=7
+ball=2
+color=6
+speed=4
+display=8
+radius=3
+angle=5

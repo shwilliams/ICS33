@@ -1,0 +1,60 @@
+-- VERSION_4
+-- START DISKCACHE
+/Users/bohyunkim/Documents/workspace/.metadata/.plugins/org.eclipse.core.resources/.projects/playground/com.python.pydev.analysis/v2_indexcache
+tester|1415846924000|/Users/bohyunkim/Documents/workspace/playground/tester.py
+iterator|1415488098000|/Users/bohyunkim/Documents/workspace/playground/iterator.py
+decorator|1418954192000|/Users/bohyunkim/Documents/workspace/playground/decorator.py
+bin_histogram|1415506607000|/Users/bohyunkim/Documents/workspace/playground/bin_histogram.py
+classmodule|1414636616000|/Users/bohyunkim/Documents/workspace/playground/classmodule.py
+-- END DISKCACHE
+-- START DICTIONARY
+13
+2=iterator
+3=tester
+6=Trace
+5=decorator
+4=bin_histogram
+8=C
+11=Percent_Histogram.PH_iter.__init__
+10=Trace.__init__
+12=Percent_Histogram.__init__
+7=Percent_Histogram
+1=classmodule
+13=C.__init__
+9=Percent_Histogram.PH_iter
+-- END DICTIONARY
+-- START TREE 1
+11
+C|1|C!9@
+_hi|1|_hidden!19@
+abs|1|abs_dif!18@
+ali|2|alist!27@alist!19@
+glo|1|global_var!11@
+i|1|i!19@
+per|1|Percent_Histogram!33@
+qui|1|quiz1!35@
+tra|1|Trace!41@
+x|1|x!11@
+y|1|y!11@
+-- END TREE
+-- START TREE 2
+18
+__c|1|__call__!6&42@
+__g|1|__getitem__!7&34@
+__i|5|__init__!6&42@__init__!8&10@__iter__!7&34@__init__!9&34@__init__!7&34@
+__n|1|__next__!9&34@
+__r|1|__repr__!7&34@
+__s|1|__str__!7&34@
+_ta|1|_tally!7&34@
+bum|1|bump!8&10@
+cla|1|class_var!8&11@
+cle|1|clear!7&34@
+f|1|f!10&43@
+f_n|1|f_name!10&43@
+his|2|histogram!11&35@histogram!12&35@
+ins|1|instance_var!13&11@
+nex|1|next!11&35@
+ph_|1|PH_iter!7&33@
+rep|1|report!8&10@
+tal|1|tally!7&34@
+-- END TREE

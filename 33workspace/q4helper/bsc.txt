@@ -1,0 +1,29 @@
+# Setup
+c-->from imp import reload
+c-->import q4solution
+c-->reload(q4solution)
+c-->from goody import irange
+c-->from predicate import is_prime
+c-->from q4solution import primes, peaks, Permutation, Permutation2, compress, skipper
+# Test peak
+e-->peaks([0,1,-1,3,8,4,3,5,4,3,8])-->[1, 8, 5]
+e-->peaks([5,2,4,9,6,1,3,8,0,7])-->[9, 8]
+e-->peaks([1,2,3,4,5])-->[]
+e-->peaks([0,1])-->[]
+e-->peaks(int(is_prime(p)) for p in irange(1,20))-->[1, 1, 1, 1, 1, 1]
+# Test Permutation
+e-->[k for k in  Permutation([4,0,3,1,2],0)]-->[0, 4, 2, 3, 1]
+e-->[k for k in  Permutation([4,0,3,1,2],3)]-->[3, 1, 0, 4, 2]
+e-->[k for k in  Permutation([0],0)]-->[0]
+# Test Permutation2
+e-->[k for k in  Permutation2([4,0,3,1,2],0)]-->[0, 4, 2, 3, 1]
+e-->[k for k in  Permutation2([4,0,3,1,2],3)]-->[3, 1, 0, 4, 2]
+e-->[k for k in  Permutation2([0],0)]-->[0]
+# Test compress
+e-->''.join([str(v) for v in compress('abcdefghijklmnopqrstuvwxyz',[is_prime(i) for i in irange(1,26)])])-->bcegkmqsw
+e-->''.join([str(v) for v in compress('abcdefghijklmnopqrstuvwxyz',(is_prime(i) for i in irange(1,26)))])-->bcegkmqsw
+# Test skipper
+e-->''.join([str(v) for v in skipper('abcdefghijklmnopqrstuvwxyz')])-->abcdefghijklmnopqrstuvwxyz
+e-->''.join([str(v) for v in skipper('abcdefghijklmnopqrstuvwxyz',1)])-->acegikmoqsuwy
+e-->''.join([str(v) for v in skipper('abcdefghijklmnopqrstuvwxyz',2)])-->adgjmpsvy
+e-->' '.join([str(v) for v in skipper(primes(50),2)])-->2 7 17 29 41

@@ -1,0 +1,24 @@
+-- VERSION_4
+-- START DISKCACHE
+/Users/bohyunkim/Documents/workspace/.metadata/.plugins/org.eclipse.core.resources/.projects/q2helper/com.python.pydev.analysis/v2_indexcache
+retester|1376588580000|/Users/bohyunkim/Documents/workspace/q2helper/retester.py
+q2solution|1413999368000|/Users/bohyunkim/Documents/workspace/q2helper/q2solution.py
+-- END DISKCACHE
+-- START DICTIONARY
+2
+1=retester
+2=q2solution
+-- END DICTIONARY
+-- START TREE 1
+7
+bat|1|batch!10@
+day|2|days_in!18@day_dict!19@
+emb|1|embed!10@
+is_|1|is_leap_year!18@
+rep|1|repeat!10@
+tes|5|test_search!10@test_substitute!10@test_findall!10@test_split!10@test_match!10@
+tom|1|tomorrow!18@
+-- END TREE
+-- START TREE 2
+0
+-- END TREE

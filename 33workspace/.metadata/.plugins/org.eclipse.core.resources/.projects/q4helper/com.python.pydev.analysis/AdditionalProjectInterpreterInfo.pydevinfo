@@ -1,0 +1,31 @@
+-- VERSION_4
+-- START DISKCACHE
+/Users/bohyunkim/Documents/workspace/.metadata/.plugins/org.eclipse.core.resources/.projects/q4helper/com.python.pydev.analysis/v2_indexcache
+q4solution|1415745968000|/Users/bohyunkim/Documents/workspace/q4helper/q4solution.py
+-- END DISKCACHE
+-- START DICTIONARY
+6
+5=Permutation.P_iter.__init__
+2=Permutation2
+6=Permutation.__init__
+4=Permutation.P_iter
+3=Permutation
+1=q4solution
+-- END DICTIONARY
+-- START TREE 1
+5
+com|1|compress!10@
+pea|1|peaks!10@
+per|2|Permutation2!9@Permutation!9@
+pri|1|primes!10@
+ski|1|skipper!10@
+-- END TREE
+-- START TREE 2
+6
+__i|5|__iter__!2&10@__iter__!3&10@__init__!2&10@__init__!4&10@__init__!3&10@
+__n|1|__next!4&10@
+l|2|l!5&11@l!6&11@
+p_i|1|P_iter!3&9@
+sta|2|start!5&11@start!6&11@
+sto|1|stop!5&11@
+-- END TREE

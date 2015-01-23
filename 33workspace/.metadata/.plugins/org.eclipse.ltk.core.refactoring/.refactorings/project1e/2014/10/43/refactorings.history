@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;project1e/wordgenerator.py.py&apos; to &apos;wordgenerator&apos;" description="Rename resource &apos;wordgenerator.py.py&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="wordgenerator.py.py" name="wordgenerator" stamp="1413854468685" updateReferences="true"/>
+</session>

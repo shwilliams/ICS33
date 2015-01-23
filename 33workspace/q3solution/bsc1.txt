@@ -1,0 +1,14 @@
+# Setup
+c-->from imp import reload
+c-->import q3solution
+c-->reload(q3solution)
+c-->from q3solution import expand_re
+c-->pd = dict(digit=r'\d', integer=r'[=-]?#digit##digit#*')
+c-->expand_re(pd)
+==-->dict(pd.items())-->{'digit': '\\d', 'integer': '[=-]?(\\d)(\\d)*'}
+c-->pd = dict(integer=r'[+-]?\d+', integer_range =r'#integer#(..#integer#)?', integer_list  =r'#integer_range#(?,#integer_range#)*', integer_set =r'{#integer_list#?}')
+c-->expand_re(pd)
+==-->dict(pd.items())-->{'integer' : '[+-]?\\d+', 'integer_range': '([+-]?\\d+)(..([+-]?\\d+))?', 'integer_list' : '(([+-]?\\d+)(..([+-]?\\d+))?)(?,(([+-]?\\d+)(..([+-]?\\d+))?))*','integer_set'  : '{((([+-]?\\d+)(..([+-]?\\d+))?)(?,(([+-]?\\d+)(..([+-]?\\d+))?))*)?}'}
+c-->pd = pd = dict(a='correct',b='#a#',c='#b#',d='#c#',e='#d#',f='#e#',g='#f#')
+c-->expand_re(pd)
+==-->dict(pd.items())-->{'d': '(((correct)))', 'c': '((correct))', 'b': '(correct)','a': 'correct', 'g': '((((((correct))))))', 'f': '(((((correct)))))','e': '((((correct))))'}

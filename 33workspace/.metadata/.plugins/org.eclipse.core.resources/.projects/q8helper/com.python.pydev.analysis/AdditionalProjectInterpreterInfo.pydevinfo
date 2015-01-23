@@ -1,0 +1,55 @@
+-- VERSION_4
+-- START DISKCACHE
+/Users/bohyunkim/Documents/workspace/.metadata/.plugins/org.eclipse.core.resources/.projects/q8helper/com.python.pydev.analysis/v2_indexcache
+performance|1369932462000|/Users/bohyunkim/Documents/workspace/q8helper/performance.py
+bag|1370015884000|/Users/bohyunkim/Documents/workspace/q8helper/bag.py
+q81solution|1418177021000|/Users/bohyunkim/Documents/workspace/q8helper/q81solution.py
+q82solution|1418246401000|/Users/bohyunkim/Documents/workspace/q8helper/q82solution.py
+-- END DISKCACHE
+-- START DICTIONARY
+11
+9=Test_Bag.setUp
+5=Bag
+11=Test_Bag
+3=performance
+1=bag
+7=Performance.__init__
+10=Bag.__init__
+6=Performance
+2=q81solution
+4=q82solution
+8=Performance.evaluate
+-- END DICTIONARY
+-- START TREE 1
+5
+bag|1|Bag!9@
+cod|1|code!18@
+per|1|Performance!25@
+set|1|setup!18@
+tes|1|Test_Bag!33@
+-- END TREE
+-- START TREE 2
+22
+__c|1|__contains__!5&10@
+__e|1|__eq__!5&10@
+__i|3|__init__!6&26@__iter__!5&10@__init__!5&10@
+__l|1|__len__!5&10@
+__r|1|__repr__!5&10@
+__s|1|__str__!5&10@
+_co|1|_code!7&27@
+_ev|2|_evaluate_results!8&27@_evaluate_results!7&27@
+_ge|1|_gen!5&10@
+_se|1|_setup!7&27@
+_ti|2|_times!7&27@_title!7&27@
+add|1|add!5&10@
+ali|1|alist!9&35@
+ana|1|analyze!6&26@
+bag|1|bag!9&35@
+cod|1|code!6&26@
+cou|2|count!5&10@counts!10&11@
+eva|1|evaluate!6&26@
+rem|1|remove!5&10@
+set|2|setUp!11&34@setup!6&26@
+tes|7|test_len!11&34@test_count!11&34@test_unique!11&34@test_add!11&34@test_equal!11&34@test_remove!11&34@test_contains!11&34@
+uni|1|unique!5&10@
+-- END TREE

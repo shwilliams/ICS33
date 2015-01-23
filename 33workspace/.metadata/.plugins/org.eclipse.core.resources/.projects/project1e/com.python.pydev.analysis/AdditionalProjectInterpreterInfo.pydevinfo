@@ -1,0 +1,18 @@
+-- VERSION_4
+-- START DISKCACHE
+/Users/bohyunkim/Documents/workspace/.metadata/.plugins/org.eclipse.core.resources/.projects/project1e/com.python.pydev.analysis/v2_indexcache
+wordgenerator|1413854953000|/Users/bohyunkim/Documents/workspace/project1e/wordgenerator.py
+-- END DISKCACHE
+-- START DICTIONARY
+1
+1=wordgenerator
+-- END DICTIONARY
+-- START TREE 1
+3
+pri|1|print_corpus!10@
+pro|1|produce_text!10@
+rea|1|read_corpus!10@
+-- END TREE
+-- START TREE 2
+0
+-- END TREE

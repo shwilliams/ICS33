@@ -1,0 +1,47 @@
+-- VERSION_4
+-- START DISKCACHE
+/Users/bohyunkim/Documents/workspace/.metadata/.plugins/org.eclipse.core.resources/.projects/program4/com.python.pydev.analysis/v2_indexcache
+bag|1384110042000|/Users/bohyunkim/Documents/workspace/program4/bag.py
+driver|1384032890000|/Users/bohyunkim/Documents/workspace/program4/driver.py
+checkannotation|1417502566000|/Users/bohyunkim/Documents/workspace/program4/checkannotation.py
+-- END DISKCACHE
+-- START DICTIONARY
+11
+8=Check_Any_OK.__init__
+6=Check_Any_OK
+5=Bag
+10=Check_Annotation.__init__
+1=bag
+9=Check_All_OK.__init__
+7=Check_All_OK
+11=Bag.__init__
+2=driver
+4=Check_Annotation
+3=checkannotation
+-- END DICTIONARY
+-- START TREE 1
+6
+bag|1|Bag!9@
+bat|2|batch_self_check!18@batch_test!18@
+che|3|Check_Annotation!25@Check_Any_OK!25@Check_All_OK!25@
+def|7|default_show_all!19@default_show_comment!19@default_show_exception!19@default_separator!19@default_file_name!19@default_show_exception_message!19@default_show_traceback!19@
+dri|1|driver!18@
+num|1|num_just!18@
+-- END TREE
+-- START TREE 2
+14
+__c|5|__call__!4&26@__check_annotation__!5&10@__contains__!5&10@__check_annotation__!6&26@__check_annotation__!7&26@
+__e|1|__eq__!5&10@
+__i|5|__iter__!5&10@__init__!4&26@__init__!6&26@__init__!7&26@__init__!5&10@
+__l|1|__len__!5&10@
+__r|3|__repr__!6&26@__repr__!7&26@__repr__!5&10@
+__s|1|__str__!5&10@
+_an|2|_annotations!8&27@_annotations!9&27@
+_f|1|_f!10&27@
+_ge|1|_gen!5&10@
+add|1|add!5&10@
+che|3|checking_on!10&27@checking_on!4&27@check!4&26@
+cou|2|count!5&10@counts!11&11@
+rem|1|remove!5&10@
+uni|1|unique!5&10@
+-- END TREE

@@ -1,0 +1,53 @@
+-- VERSION_4
+-- START DISKCACHE
+/Users/bohyunkim/Documents/workspace/.metadata/.plugins/org.eclipse.core.resources/.projects/q6helper/com.python.pydev.analysis/v2_indexcache
+q6solution|1416983701000|/Users/bohyunkim/Documents/workspace/q6helper/q6solution.py
+-- END DISKCACHE
+-- START DICTIONARY
+11
+10=TN.__init__
+1=q6solution
+9=Dumpable
+2=Modular_Counter
+7=Counter.reset
+5=TN
+4=LN
+3=Counter
+6=Modular_Counter.__init__
+11=LN.__init__
+8=Counter.__init__
+-- END DICTIONARY
+-- START TREE 1
+9
+LN|1|LN!9@
+TN|1|TN!9@
+add|2|add!10@add_all!10@
+cou|2|Counter!9@count!10@
+dum|1|Dumpable!9@
+equ|1|equal!10@
+lis|1|list_to_ll!10@
+min|1|min_max!10@
+mod|1|Modular_Counter!9@
+-- END TREE
+-- START TREE 2
+19
+__i|4|__init__!2&10@__init__!3&10@__init__!4&10@__init__!5&10@
+__s|2|__str__!2&10@__str__!3&10@
+_mo|1|_modulus!6&11@
+_va|2|_value!7&11@_value!8&11@
+a|1|a!2&11@
+b|1|b!2&11@
+c|1|c!2&11@
+d|1|d!2&11@
+e|1|e!2&11@
+get|1|get_state!9&10@
+inc|2|inc!2&10@inc!3&10@
+lef|1|left!10&11@
+mc|1|mc!2&11@
+mod|1|modulus_of!2&10@
+nex|1|next!11&11@
+res|1|reset!3&10@
+rig|1|right!10&11@
+t|1|t!2&11@
+val|4|values!2&11@value!11&11@value!10&11@value_of!3&10@
+-- END TREE
